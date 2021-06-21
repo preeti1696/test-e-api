@@ -7,6 +7,7 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="ca512716-657d-445d-843e-99ddc2324b32" >
 		<http:listener-connection host="0.0.0.0" port="8081" />
 	</http:listener-config>
+	<configuration-properties doc:name="Configuration properties" doc:id="cd0d34d4-efa8-4339-b123-d5f1ca6d7b13" file="dev.properties" />
 	<flow name="testFlow" doc:id="603faf6e-7500-4e02-afc3-56e485ed6d47" >
 		<http:listener doc:name="Listener" doc:id="7716252d-2ce2-41dd-a953-d8839099d606" path="/hello" config-ref="HTTP_Listener_config"/>
 		<set-payload value="Hello World!" doc:name="Set Payload" doc:id="fc336d10-84d9-4b39-8a8d-b328ae94897b" />
